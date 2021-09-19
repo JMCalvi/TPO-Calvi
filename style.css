@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+}
+
+
+.background {
+    background: url('Recursos/background.gif');
+    background-size: cover;
+    background-repeat: repeat-x;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    background-color: transparent;
+}
+
+.header-text {
+    font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: italic;
+    padding: 0.5%;
+    font-size: 130%;
+    color: yellow;
+    font-weight: 200;
+}
+
+.item {
+    background-color: transparent;
+    /* border: 1px solid rgba(0,0,0,0.8);  --> esta linee ayuda a ver como esta organizada la pagina*/
+    text-align: center;
+    height: auto;
+}
+
+.cabeza {  
+    grid-template-columns: 1fr;
+    background-color: black;
+    border-radius: 7px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.bl-bg {
+    background-color: rgba(100, 100, 100, 0.8);
+}
+
+.wht-bg {
+    background-color: white;
+}
+
+.square {
+    padding: 3px;
+    border: 1px solid black;
+    height: 75px;
+    max-width: 45%;
+    border-radius: 7px;
+    margin-left: 27%;
+}
+.cuerpo {
+    border: 1px solid black;
+    border-radius: 7px;
+    grid-template-columns: repeat(4, 25%);
+}
+.images {
+    height: 100px;    
+}
+
+.stock-images {
+    height: 100%;
+}
+
+.suelto {
+    border: none;
+}
+
+.descripcion {
+    background-color: lightgray;
+    padding: 1%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 200;
+    width: 64%;
+    margin-left: 20%;
+}
+
+.info-container {
+    padding-top: 1%;
+    margin-left: 100px;
+    margin-right: 100px;
+    color: white;
+    background-color: #28282B;
+    border: 2px solid silver;
+    display: grid;
+    column-count: 2;
+    justify-content: center;
+}
+
+.background-contacto {
+    background-color: black;
+}
