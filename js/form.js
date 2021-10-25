@@ -1,15 +1,21 @@
 let button = document.getElementById('btn')
-let input = document.getElementById('task')
+let input = document.getElementById('mail')
+
+var validRegex = /^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)$/;
+
+function sendMail () {
+    if (!input.value.match(validRegex)) {
+        input.classList.add('txt-error')
+        return false
+    }
+    validated.hidden = false
+    return true
+}
 
 input.addEventListener('input', () => {
-    let n = 0;
-    for (let i = 0; i < input.value.length; i++) {
-        if (input.value[i] == '@') {
-            n++;
-        }
-    }   if (n == 1) {
-            button.disabled = false;
-    }   else {
-            button.disabled = true;
-    }
+    input.classList.remove('txt-error')
 })
+
+function popupUploadForm(){
+    var newWindow = window.open('/cert.html', 'name', 'height=500,width=600');
+}

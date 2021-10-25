@@ -12,13 +12,31 @@
     <script src="https://kit.fontawesome.com/9ea1a752b1.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="contact.css">
     <title>CHULO | CONTACTO</title>
 </head>
 
 <header>
     <br><br><br>
     <div class="container">
+<<<<<<< HEAD:contacto.html
+        <div class="row align-items-lg-center">
+            <div class="col">
+            <!-- relleno para las columnas -->
+            </div>
+            <!-- centro, home -->
+            <div class="col animate__animated animate__flipInX">
+                <a href="index.html">
+                    <img class="img-fluid" src="Recursos/titulo-wht.png" alt="CHULO">
+                </a>
+            </div>
+            <div class="col"></div>
+            <!-- relleno para las columnas -->
+            </div>
+=======
         <div class="row">
 		<div class="col-lg-12">
         	    <!-- centro, home -->
@@ -28,36 +46,44 @@
                		</a>
 		    </div>
 		</div>
+>>>>>>> 26ac79cbf1559b0efc652a08b64b603e1bd20a6b:pag-c-contacto.html
         </div>
     </div>
     <br><br>
 </header>
 
 <body style="background-color: black;">
-    <div class="container" style="color: whitesmoke; font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
-        <form name='formulario'>
+    <div class="container" style="color: whitesmoke; font-family: 'Roboto', 'sans-serif';">
+        <form name="formulario">
             <div class="row align-items-sm-center">
                 <div class="col">
                         <div class="mb-3">
-                        <label class="form-label">Dirección de correo</label>
-                        <input type="email" class="form-control" placeholder="nombre@ejemplo.com" id="task">
+                        <label class="form-label" style="max-width: 116; max-height: 103;">Dirección de correo</label>
+                        <input type="email"class="form-control" placeholder="nombre@ejemplo.com" id="mail">
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Mandanos un mensaje!</label>
-                        <textarea class="form-control" rows='3'  name="comentario"></textarea>
+                        <textarea class="form-control" rows="3" id= 'msg' name="comentario"></textarea> 
                     </div> 
                 </div>
             </div>
             <div class="row align-items-sm-start">
                 <div class="mb-3">
                     <div class="col">
-                        <button type='submit' class="btn btn-outline-light btn-lg" id='btn' disabled>
+                        <button onclick='return sendMail(); popupUploadForm();' type='submit' class="btn btn-outline-light btn-lg" id='btn'>
                             Enviar
                         </button>
                     </div>
                 </div>
             </div>
         </form>
+        <div class="row align-items-sm-center" id="validated" hidden>
+            <div class="col">
+                <div class="mb-3">    
+                    <h1 class="display-5"><i class="fas fa-check"></i> Tu mensaje fue enviado!</h1>
+                </div> 
+            </div>
+        </div>
     </div>
     <script type='text/javascript' src="js/form.js"></script>
 </body>
