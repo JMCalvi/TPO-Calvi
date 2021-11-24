@@ -1,9 +1,9 @@
 let button = document.getElementById('btn')
-let input = document.getElementById('mail')
+let input = document.getElementById('to-fill')
 
 var validRegex = /^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)$/;
 
-function sendMail () {
+function sendMail() {
     if (!input.value.match(validRegex)) {
         input.classList.add('txt-error')
         return false
@@ -12,10 +12,10 @@ function sendMail () {
     return true
 }
 
-input.addEventListener('input', () => {
+input.addEventListener('to-fill', () => {
     input.classList.remove('txt-error')
 })
 
-function popupUploadForm(){
+function popupUploadForm() {
     var newWindow = window.open('/cert.html', 'name', 'height=500,width=600');
 }
